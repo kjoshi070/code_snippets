@@ -1,1 +1,1 @@
-# code_snippets
+# Small code snippets for reference
