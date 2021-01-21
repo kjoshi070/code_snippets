@@ -1,0 +1,25 @@
+- AJAX = Asynchronous JavaScript and XML.
+
+- In short; AJAX is about loading data in the background and display it on the webpage, without reloading the whole page.
+
+- jQuery provides several methods for AJAX functionality.
+- With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post - And you can load the external data directly into the selected HTML elements of your web page!
+- Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. This means that you will have to write extra code to test for different browsers. However, the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.
+
+- Form submission should be done via page reloads (let the user see it working), whereas display updates should use AJAX (prevent annoying page reloads).
+
+- In this day and age, there is virtually no case to use the old standard HTML form submission method (other than pure nostalgia, or perhaps not knowing).
+- The <form> tags themselves can still be useful if you want to take advantage of the .serialize() function (which grabs all name-data pairs within the form into a query string), but other than that we don't need to use <form> tags at all these days.
+- To include jQuery in your project, it is only necessary to include a reference to the jQuery library:
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+
+- Further reading: Google about "html form submit vs ajax"
+
+URLS:
+- https://www.digitalocean.com/community/tutorials/submitting-ajax-forms-with-jquery
+- https://stackoverflow.com/questions/22577457/update-data-on-a-page-without-refreshing
+- http://jsfiddle.net/u5s6mhwa/
+- https://www.sanwebe.com/2016/07/ajax-form-submit-examples-using-jquery
+
