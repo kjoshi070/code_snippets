@@ -1,0 +1,53 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<form id="my_form" action="{{urlroot}}testAPI" method="post">
+    <!-- Form input fields here (do not forget your name attributes). -->
+    <h1>AJAX Demo</h1>
+    <div class="excontainer">
+        <button id="loadbasic">Call AJAX</button>
+        
+    </div>
+    <select name="select1" id="select1" required class="selectpicker form-control">
+        <option id="option-default-proj" value="">Select project:</option>
+        <option value="v1">V1</option>
+        <option value="v2">V2</option>
+        <option value="v3">V3</option>
+    </select>
+
+    <select name="select2" id="select2" required class="selectpicker form-control">
+        <option id="option-default-proj" value="">Select value:</option>
+        <option value="v4">V4</option>
+        <option value="v5">V5</option>
+        <option value="v6">V6</option>
+    </select>
+
+    <div class="checkbox">
+        <label class="checkbox-inline"><input type="checkbox" value="" name="option1">Option 1</label>
+    </div>
+    <div class="checkbox">
+        <label class="checkbox-inline"><input type="checkbox" value="" name="option2">Option 2</label>
+    </div>
+
+    <input type="hidden" name="project_hidden" value="{{project}}"/>
+
+</form>
+<div id="server-results"></div>
+<script>
+     $.ajaxSetup ({
+        cache: false
+    });
+
+    $("#my_form").submit(function(event) {
+        event.preventDefault(); //prevent default action 
+        var post_url = $(this).attr("action"); //get form action url
+        var request_method = $(this).attr("method"); //get form GET/POST method
+        var form_data = $(this).serialize(); //Encode form elements for submission
+        
+        $.ajax({
+            url : post_url,
+            type: request_method,
+            data : form_data
+        }).done(function(response){ //
+            $("#server-results").html(response);
+        });
+});
+</script>

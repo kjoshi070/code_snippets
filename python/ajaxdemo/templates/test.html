@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <script>
+    function showInput() {
+        $("#display").load('http://localhost:5000/test1?project=KEDAR')
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form>
+    <label><b>Enter a Message</b></label>
+    <input type="text" name="message" id="user_input">
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+  <label>Your input: </label>
+  <p><span id='display'></span></p>
+</body>
+</html>
